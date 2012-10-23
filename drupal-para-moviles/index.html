@@ -66,7 +66,7 @@
             <ol>
               <li class="fragment"><small>Es un sistema de gestión de contenido(CMS) modular multipropósito y muy configurable</small></li>
               <li class="fragment"><small>Originalmente fue Escrito por: <a href="http://es.wikipedia.org/wiki/Dries_Buytaert">Dries Buytaert</a></small></li>
-              <li class="fragment"><small>La caracteristica principal de Drupal es su Comunidad en todo el mundo</small></li>
+              <li class="fragment"><small>La caracter&iacute;stica principal de Drupal es su Comunidad en todo el mundo</small></li>
               <li class="fragment"><small>Claro! es Software Libre \m/ protegido por Licencia <a href="http://es.wikipedia.org/wiki/Licencia_p%C3%BAblica_general_de_GNU">GPLv2/GPLv3</a></small></li>
             </ol>
 					</section>
@@ -76,140 +76,181 @@
 					</section>
 					<section>
 						<h2>Comunidad</h2>
-            <small>La caracteristica principal de drupal es su cominidad que esta en constante crecimiento</small>
+            <small>La caracter&iacute;stica principal de drupal es su cominidad que esta en constante crecimiento</small>
 						<img src="images/drupaleros.jpg">
 					</section>
 				</section>
-
+            <section>
+               <section>
+                  <h2>Desarrollo de Aplicaciones M&oacute;viles</h2>
+                  <p class="fragment">Quieres desarrollar una aplicación m&oacute;vil?</p>
+                  <h4 class="fragment roll-in">T&eacute;cnicamente necesitar&aacute;s</h4>
+                  <ul>
+                     <li class="fragment roll-in">Datos y M&oacute;delo de negocio</li>
+                     <li class="fragment roll-in">Plataforma de desarrollo</li>
+                     <li class="fragment roll-in"><h3 class="fragment highlight-blue">Servicios Web</h3></li>
+                  </ul>
+               </section>
+               <section>
+                  <h2>Datos y M&oacute;delo de negocio</h2>
+                  <p>Esto es toda la l&oacute;gica que la aplicaci&oacute;n proporcionar&aacute; a los usuarios</p>
+                  <img src="images/modelo.png">
+               </section>
+               <section>
+                  <h2>Plataforma de desarrollo</h2>
+                  <p class="fragment">
+                     <img src="images/android.png">
+                     <img src="images/apple.png">
+                     <img src="images/winbugs.png">
+                     <img src="images/bb.png">
+                     <img src="images/mweb.png">
+                  </p>
+               </section>
+               <section>
+                  <h2>Servicios Web</h2>
+                  <p>Es el mecanismo de comunicaci&oacute;n entre tus datos, m&oacute;delo de negocio y la aplicaci&oacute;n m&oacute;vil</p>
+                  <img src="images/mobile1.png">
+                  <img src="images/mobile2.png">
+               </section>
+          </section>
+          <section>
+            <section>
+               <img src="images/drupal.png">
+               <h2>Drupal Services</h2>
+               <small>
+               Es una solución estandarizada para la integraci&oacute;n de aplicaciones externas con Drupal. Las Devoluciones de llamada de servicio pueden ser utilizados con múltiples interfaces como REST, XMLRPC, JSON, JSON-RPC, SOAP, AMF, etc.
+               </small>
+            </section>
+            <section>
+               <h2>M&oacute;dulos con soporte de servicio</h2>
+               <ul>
+                  <li><a href="http://drupal.org/project/services_views">Services Views</a></li>
+                  <li><a href="http://drupal.org/project/services_rules">Services Rules</a></li>
+                  <li><a href="http://drupal.org/project/services_client">Services client</a></li>
+                  <li><a href="http://drupal.org/project/user_relationships">User relationships</a></li>
+                  <li><a href="http://drupal.org/project/services_search_api">Services Search API</a></li>
+                  <li><a href="http://drupal.org/project/services_entity">Services Entity API</a></li>
+                  <li><a href="http://drupal.org/project/backbone">Backbone</a></li>
+                  <li><a href="http://drupal.org/project/services_search">Services search</a></li>
+                  <li><a href="https://drupal.org/project/nodequeue">Nodequeue</a></li>
+               </ul>
+            </section>
+             <section>
+               <h2>REST</h2>
+               <small>
+               <strong>REpresentational State Transfer (REST)</strong> es un estilo de arquitectura de software para sistemas distribuidos como la World Wide Web. REST se ha convertido en un modelo de diseño predominante de servicios Web.
+               </small>
+               <p class="fragment">Resource</p>
+               <ul>
+                   <li class="fragment">GET</li>
+                   <li class="fragment">PUT</li>
+                   <li class="fragment">POST</li>
+                   <li class="fragment">DELETE</li>
+               </ul>
+             </section>
+             <section>
+               <h2>XML-RPC</h2>
+               <small>XML-RPC es un protocolo de llamada a procedimiento remoto que usa XML para codificar los datos y HTTP como protocolo de transmisión de mensajes.</small>
+               <p></p>
+               <small class="fragment"><strong>Remote Procedure Call(RPC)</strong>, una técnica para la comunicación entre procesos en una o más computadoras conectadas a una red.</small>
+               <p></p>
+               <h4 class="fragment">Ejemplo:</h4>
+               <pre class="fragment"><code contenteditable style="font-size: 18px; margin-top: 20px;">
+       &lt;?xml version="1.0"?&gt;
+         &lt;methodCall&gt;
+           &lt;methodName&gt;org.wikipedia.intercambioDatos&lt;/methodName&gt;
+           &lt;params&gt;
+             &lt;param&gt;
+                &lt;value&gt;&lt;i4&gt;360&lt;/i4&gt;&lt;/value&gt;
+             &lt;/param&gt;
+             &lt;param&gt;
+                &lt;value&gt;&lt;i4&gt;221&lt;/i4&gt;&lt;/value&gt;
+             &lt;/param&gt;
+           &lt;/params&gt;
+         &lt;/methodCall&gt;
+               </code></pre>
+             </section>
+             <section>
+               <h2>JSON</h2>
+               <small class="fragment"><strong>Es acrónimo de JavaScript Object Notation(JSON)</strong>, es un formato ligero para el intercambio de datos. JSON es un subconjunto de la notación literal de objetos de JavaScript que no requiere el uso de XML.</small>
+               <p></p>
+               <h4 class="fragment">Ejemplo:</h4>
+               <pre class="fragment"><code contenteditable style="font-size: 12px; margin-top: 20px;">
+   {"menu": {
+      "id": "file",
+      "value": "File",
+      "popup": {
+        "menuitem": [
+          {"value": "New", "onclick": "CreateNewDoc()"},
+          {"value": "Open", "onclick": "OpenDoc()"},
+          {"value": "Close", "onclick": "CloseDoc()"}
+        ]
+      }
+    }}
+   &lt;menu id="file" value="File"&gt;
+     &lt;popup&gt;
+       &lt;menuitem value="New" onclick="CreateNewDoc()" /&gt;
+       &lt;menuitem value="Open" onclick="OpenDoc()" /&gt;
+       &lt;menuitem value="Close" onclick="CloseDoc()" /&gt;
+     &lt;/popup&gt;
+   &lt;/menu&gt;
+               </code></pre>
+                 </section>
+             <section>
+               <h2>JSON-RPC</h2>
+               <small class="fragment"><strong>JSON-RPC</strong>es un protocolo de llamada a procedimiento remoto codificado en JSON. Es un protocolo muy simple (y muy similar a XML-RPC), que define sólo algunos tipos de datos y comandos.</small><p></p>
+               <h4 class="fragment">Ejemplo:</h4>
+               <pre class="fragment"><code contenteditable style="font-size: 18px; margin-top: 20px;">
+   --&gt; {"jsonrpc": "2.0", "method": "subtract", "params": [42, 23], "id": 1}
+   &lt;-- {"jsonrpc": "2.0", "result": 19, "id": 1}
+               </code></pre>
+                 </section>
+             <section>
+               <h2>SOAP</h2>
+               <small class="fragment"><strong>SOAP (siglas de Simple Object Access Protocol) </strong>es un protocolo estándar que define cómo dos objetos en diferentes procesos pueden comunicarse por medio de intercambio de datos XML. </small>
+               <p></p>
+               <h4 class="fragment">Ejemplo:</h4>
+               <pre class="fragment"><code contenteditable style="font-size: 18px; margin-top: 20px;">
+   &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+      &lt;soap:Body&gt;
+        &lt;getProductDetails xmlns="http://warehouse.example.com/ws"&gt;
+          &lt;productId&gt;827635&lt;/productId&gt;
+        &lt;/getProductDetails&gt;
+      &lt;/soap:Body&gt;
+   &lt;/soap:Envelope&gt;
+               </code></pre>
+                 </section>
+   <!--
+             <section>
+               <h1>Ejemplo de Resources</h1>
+               <p><a href="https://gist.github.com/affc9864487bb1b9c918">https://gist.github.com/affc9864487bb1b9c918</a></p>
+             </section>-->
+         </section>
+         <section>
+            <section>
+               <h2>&iquest;porque Drupal?</h2>
+               <ul>
+                  <li>Minimiza esfuerzos</li>
+                  <li>Minimiza esfuerzos</li>
+                  <li>Minimiza esfuerzos</li>
+                  <li>Minimiza esfuerzos</li>
+               </ul>
+            </section>
+         </section>
+         <section>
 				<section>
-					<h2>Explicación del entorno</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview. Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
+               <img src="images/meme.png">
+					<h2>Ya me aburri y eso ya lo s&eacute;!!!</h2>
 				</section>
-
 				<section>
-          <section>
-            <img src="images/drupal.png">
-            <h2>Drupal Services</h2>
-            <small>
-            Es una solución estandarizada para la integraci&oacute;n de aplicaciones externas con Drupal. Las Devoluciones de llamada de servicio pueden ser utilizados con múltiples interfaces como REST, XMLRPC, JSON, JSON-RPC, SOAP, AMF, etc.
-            </small>
-          </section>
-          <section>
-            <h2>REST</h2>
-            <small>
-            <strong>REpresentational State Transfer (REST)</strong> es un estilo de arquitectura de software para sistemas distribuidos como la World Wide Web. REST se ha convertido en un modelo de diseño predominante de servicios Web.
-            </small>
-            <p class="fragment">Resource</p>
-            <ul>
-                <li class="fragment">GET</li>
-                <li class="fragment">PUT</li>
-                <li class="fragment">POST</li>
-                <li class="fragment">DELETE</li>
-            </ul>
-          </section>
-          <section>
-            <h2>XML-RPC</h2>
-            <small>XML-RPC es un protocolo de llamada a procedimiento remoto que usa XML para codificar los datos y HTTP como protocolo de transmisión de mensajes.</small>
-            <p></p>
-            <small class="fragment"><strong>Remote Procedure Call(RPC)</strong>, una técnica para la comunicación entre procesos en una o más computadoras conectadas a una red.</small>
-            <p></p>
-            <h4 class="fragment">Ejemplo:</h4>
-            <pre class="fragment"><code contenteditable style="font-size: 18px; margin-top: 20px;">
-    &lt;?xml version="1.0"?&gt;
-      &lt;methodCall&gt;
-        &lt;methodName&gt;org.wikipedia.intercambioDatos&lt;/methodName&gt;
-        &lt;params&gt;
-          &lt;param&gt;
-             &lt;value&gt;&lt;i4&gt;360&lt;/i4&gt;&lt;/value&gt;
-          &lt;/param&gt;
-          &lt;param&gt;
-             &lt;value&gt;&lt;i4&gt;221&lt;/i4&gt;&lt;/value&gt;
-          &lt;/param&gt;
-        &lt;/params&gt;
-      &lt;/methodCall&gt;
-            </code></pre>
-          </section>
-          <section>
-            <h2>JSON</h2>
-            <small class="fragment"><strong>Es acrónimo de JavaScript Object Notation(JSON)</strong>, es un formato ligero para el intercambio de datos. JSON es un subconjunto de la notación literal de objetos de JavaScript que no requiere el uso de XML.</small>
-            <p></p>
-            <h4 class="fragment">Ejemplo:</h4>
-            <pre class="fragment"><code contenteditable style="font-size: 12px; margin-top: 20px;">
-{"menu": {
-   "id": "file",
-   "value": "File",
-   "popup": {
-     "menuitem": [
-       {"value": "New", "onclick": "CreateNewDoc()"},
-       {"value": "Open", "onclick": "OpenDoc()"},
-       {"value": "Close", "onclick": "CloseDoc()"}
-     ]
-   }
- }}
-&lt;menu id="file" value="File"&gt;
-  &lt;popup&gt;
-    &lt;menuitem value="New" onclick="CreateNewDoc()" /&gt;
-    &lt;menuitem value="Open" onclick="OpenDoc()" /&gt;
-    &lt;menuitem value="Close" onclick="CloseDoc()" /&gt;
-  &lt;/popup&gt;
-&lt;/menu&gt;
-            </code></pre>
-				  </section>
-          <section>
-            <h2>JSON-RPC</h2>
-            <small class="fragment"><strong>JSON-RPC</strong>es un protocolo de llamada a procedimiento remoto codificado en JSON. Es un protocolo muy simple (y muy similar a XML-RPC), que define sólo algunos tipos de datos y comandos.</small><p></p>
-            <h4 class="fragment">Ejemplo:</h4>
-            <pre class="fragment"><code contenteditable style="font-size: 18px; margin-top: 20px;">
---&gt; {"jsonrpc": "2.0", "method": "subtract", "params": [42, 23], "id": 1}
-&lt;-- {"jsonrpc": "2.0", "result": 19, "id": 1}
-            </code></pre>
-				  </section>
-          <section>
-            <h2>SOAP</h2>
-            <small class="fragment"><strong>SOAP (siglas de Simple Object Access Protocol) </strong>es un protocolo estándar que define cómo dos objetos en diferentes procesos pueden comunicarse por medio de intercambio de datos XML. </small>
-            <p></p>
-            <h4 class="fragment">Ejemplo:</h4>
-            <pre class="fragment"><code contenteditable style="font-size: 18px; margin-top: 20px;">
-&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
-   &lt;soap:Body&gt;
-     &lt;getProductDetails xmlns="http://warehouse.example.com/ws"&gt;
-       &lt;productId&gt;827635&lt;/productId&gt;
-     &lt;/getProductDetails&gt;
-   &lt;/soap:Body&gt;
-&lt;/soap:Envelope&gt;
-            </code></pre>
-				  </section>
-          <section>
-            <h1>Ejemplo de Resources</h1>
-            <p><a href="https://gist.github.com/affc9864487bb1b9c918">https://gist.github.com/affc9864487bb1b9c918</a></p>
-          </section>
-        </section>
-				<section>
-					<h2>M&oacute;dulos con soporte de servicio</h2>
-					<ul>
-						<li><a href="http://drupal.org/project/services_views">Services Views</a></li>
-						<li><a href="http://drupal.org/project/services_rules">Services Rules</a></li>
-						<li><a href="http://drupal.org/project/services_client">Services client</a></li>
-						<li><a href="http://drupal.org/project/user_relationships">User relationships</a></li>
-						<li><a href="http://drupal.org/project/services_search_api">Services Search API</a></li>
-						<li><a href="http://drupal.org/project/services_entity">Services Entity API</a></li>
-						<li><a href="http://drupal.org/project/backbone">Backbone</a></li>
-						<li><a href="http://drupal.org/project/services_search">Services search</a></li>
-						<li><a href="https://drupal.org/project/nodequeue">Nodequeue</a></li>
-					</ul>
+               <img src="images/que.jpg">
+					<h2>Si... claro... lo que digas!<small>no se de lo que estas hablando! XD</small></h2>
 				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
+         </section>
+         <section>
+            <img src="images/badcamp.png">
+            <h2>Es hora de Rockear!!!</h2>
+         </section>
 				<section data-markdown>
 					<script type="text/template">
 						## Markdown support
