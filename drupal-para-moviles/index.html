@@ -228,12 +228,26 @@
          </section>
          <section>
             <section>
-               <h2>&iquest;porque Drupal?</h2>
+               <h2>&iquest;porque Drupal Services?</h2>
                <ul>
-                  <li>Minimiza esfuerzos</li>
-                  <li>Minimiza esfuerzos</li>
-                  <li>Minimiza esfuerzos</li>
-                  <li>Minimiza esfuerzos</li>
+                  <li>Minimiza esfuerzos y tiempos.</li>
+                  <li>F&aacute;cil de personalizar.</li>
+                  <li>Provee de un amplio API.</li>
+                  <li>Cuenta com muchos canales de soporte IRC, Groups, etc.</li>
+                  <li>Soportado Ampliamente por la Comunidad.</li>
+                  <li>F&aacute;cil de contribuir.</li>
+               </ul>
+            </section>
+            <section>
+               <h2>Cuando NO deber&iacute;as ocuparlo</h2>
+               <ul>
+                  <li class="fragment">...</li>
+                  <li class="fragment">...</li>
+                  <li class="fragment">...</li>
+                  <li class="fragment">Con millones lotes de información y much&iacute;simo tr&aacute;fico</li>
+                  <li class="fragment">Generalmente son problemas que Drupal presenta</li>
+                  <li class="fragment">Pero estoy puedes resolverlo con:</li>
+                  <li class="fragment">Buena Configuraci&oacute; del Servidor y Performance de Drupal</li>
                </ul>
             </section>
          </section>
@@ -244,27 +258,95 @@
 				</section>
 				<section>
                <img src="images/que.jpg">
-					<h2>Si... claro... lo que digas!<small>no se de lo que estas hablando! XD</small></h2>
+					<h2>Si... claro... lo que digas!<small>no se de lo que esta hablando! ese we XD</small></h2>
 				</section>
          </section>
          <section>
             <img src="images/badcamp.png">
             <h2>Es hora de Rockear!!!</h2>
          </section>
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+         <section>
+					<section>
+               <h2>Primero instalemos nuestro Drupal</h2>
+               <p class="fragment">Claro!!! debe ser como los hombre XD.</p>
+               <pre class="fragment"><code contenteditable>
+$ drush dl --drupal-project-rename="ENLi"
+$ drush si --db-url=mysql://enli:enli@127.0.0.1/enli
+         --account-name="admin"
+         --account-pass="enli"
+         --account-mail="soporte@softlite.mx"
+         --site-mail="soporte@softlite.mx"
+         --site-name="ENLi 2012"
+               </code></pre>
+               <p class="fragment">Descargamos Services</p>
+               <pre class="fragment"><code contenteditable>
+$ drush dl services
+Project services (7.x-3.2) downloaded to /home/manueler/dweb/ENLi/sites/all/modules/services.                              [success]
+Project services contains 5 modules: xmlrpc_server, xcal_format, rest_server, services_oauth, services.
+               </code></pre>
+               </section>
+               <section>
+               <h2>Primero instalemos nuestro Drupal</h2>
+               <p class="fragment">Activamos los m&oacute;dulo</p>
+               <pre class="fragment"><code contenteditable style="font-size: 15px;">$ drush  en xmlrpc_server, xcal_format, rest_server, services_oauth, services -y
+No release history available for oauth_common 7.x.                            [warning]
+The following projects have unmet dependencies:
+xmlrpc_server requires ctools
+rest_server requires libraries, ctools
+services_oauth requires ctools
+services requires ctools
+Would you like to download them? (y/n): y
+Project ctools (7.x-1.2) downloaded to /home/manueler/dweb/ENLi/sites/all/modules/ctools.                                                                            [success]
+Project ctools contains 9 modules: views_content, stylizer, page_manager, ctools_plugin_example, ctools_custom_content, ctools_ajax_sample, ctools_access_ruleset, bulk_export, ctools.
+Project libraries (7.x-2.0) downloaded to /home/manueler/dweb/ENLi/sites/all/modules/libraries.                                                                      [success]
+No release history available for oauth_common 7.x.                            [warning]
+Module services_oauth cannot be enabled because it depends on the following modules which could not be found: oauth_common.                                            [error]
+               </code></pre>
+            </section>
+            <section>
+               <h2>Primero instalemos nuestro Drupal</h2>
+               <p class="fragment">Resolvemos la dependecia</p>
+               <pre class="fragment"><code contenteditable style="font-size: 15px;">$ drush dl oauth
+drush  en xmlrpc_server, xcal_format, rest_server, services_oauth, services -y
+The following extensions will be enabled: xmlrpc_server, xcal_format, rest_server, services_oauth, services, ctools, libraries, oauth_common
+Do you really want to continue? (y/n): y
+ctools was enabled successfully.                                                   [ok]
+libraries was enabled successfully.                                                [ok]
+oauth_common was enabled successfully.                                             [ok]
+rest_server was enabled successfully.                                              [ok]
+services was enabled successfully.                                                 [ok]
+services_oauth was enabled successfully.                                           [ok]
+xcal_format was enabled successfully.                                              [ok]
+xmlrpc_server was enabled successfully.                                            [ok]
+               </code></pre>
+            </section>
+            <section>
+               <h2>Primero instalemos nuestro Drupal</h2>
+               <p>Deshabilitamos toolbar</p>
+               <pre><code contenteditable style="font-size: 15px;">$ drush dis toolbar
+toolbar is already disabled.                                                       [ok]
+There were no extensions that could be disabled.                                   [ok]
+</code></pre>
+               <p>Instalamos m&oacute;dulos esenciales para la adminsitraci&oacute;n</p>
+               <pre><code contenteditable style="font-size: 15px;">$ drush dl admin_menu devel
+Project admin_menu (7.x-3.0-rc3) downloaded to /home/manueler/dweb/ENLi/sites/all/modules/admin_menu.                                                                [success]
+Project admin_menu contains 3 modules: admin_menu_toolbar, admin_devel, admin_menu.
+Project devel (7.x-1.3) downloaded to /home/manueler/dweb/ENLi/sites/all/modules/devel.                                                                              [success]
+Project devel contains 3 modules: devel_generate, devel, devel_node_access.
 
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-							<section data-markdown>
-							  ## Markdown support
-
-							  For those of you who like that sort of thing.
-							  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-							</section>
-					</script>
-				</section>
+$ drush en admin_menu_toolbar, admin_devel, admin_menu devel_generate, devel, devel_node_access -y
+The following extensions will be enabled: admin_menu_toolbar, admin_devel, admin_menu, devel_generate, devel, devel_node_access, menu
+Do you really want to continue? (y/n): y
+admin_devel was enabled successfully.                                              [ok]
+devel_generate was enabled successfully.                                           [ok]
+devel_node_access was enabled successfully.                                        [ok]
+menu was enabled successfully.                                                     [ok]
+admin_menu was enabled successfully.                                               [ok]
+admin_menu_toolbar was enabled successfully.                                       [ok]
+devel was enabled successfully.                                                    [ok]
+</code></pre>
+               </section>
+         </section>
 
 				<section id="transitions">
 					<h2>Transition Styles</h2>
